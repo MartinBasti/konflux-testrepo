@@ -1,0 +1,17 @@
+apiVersion: tekton.dev/v1
+kind: Pipeline
+metadata:
+  name: example test
+spec:
+  params:
+    - name: HELLO
+      default: "Hello World!"
+  tasks:
+    - name: echo-hello
+      taskSpec:
+        steps:
+          - name: echo
+            image: "registry.access.redhat.com/ubi8-minimal:8.9-1161"
+            script: |
+              #!/usr/bin/env bash
+              echo "$(params.HELLO)"
