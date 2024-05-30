@@ -11,4 +11,4 @@ spec:
             image: "registry.access.redhat.com/ubi8-minimal:8.9-1161"
             script: |
               #!/usr/bin/env bash
-              echo "Hello World!"
+              echo "Hello New Test from the FORKED repo!"
